@@ -1,0 +1,10 @@
+.scroll-left {
+  opacity: 0;
+  transform: translateX(-50px); /* starts from the left */
+  transition: all 0.8s ease-out;
+}
+
+.scroll-left.visible {
+  opacity: 1;
+  transform: translateX(0); /* ends at normal position */
+}

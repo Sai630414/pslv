@@ -1,0 +1,56 @@
+.hook-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 20px;
+
+  background-image: url('https://cdn.prod.website-files.com/66aa8fe9dc4db68f448a978f/6818f0115492ccddd3af7a36_coach-comp.webp'); /* your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+
+.hook-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.hook-text,
+.hook-image {
+  position: relative;
+  z-index: 2;
+}
+
+.hook-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hook-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Scroll animation */
+.scroll-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

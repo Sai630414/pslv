@@ -1,0 +1,10 @@
+.scroll-right {
+  opacity: 0;
+  transform: translateX(50px); /* start off to the right */
+  transition: all 0.8s ease-out;
+}
+
+.scroll-right.visible {
+  opacity: 1;
+  transform: translateX(0); /* slide to original position */
+}
