@@ -1,0 +1,44 @@
+.whr-form-container {
+  background: #e8f0fe;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.whr-form-container h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.whr-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #14213d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+}

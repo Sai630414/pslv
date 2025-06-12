@@ -1,0 +1,17 @@
+<div class="bmi-form-container">
+  <h2>Calculate Your BMI</h2>
+  <form [formGroup]="bmiForm" (ngSubmit)="calculateBMI()">
+    <label for="height">Height (cm)</label>
+    <input id="height" type="number" formControlName="height" placeholder="Enter height in cm" />
+
+    <label for="weight">Weight (kg)</label>
+    <input id="weight" type="number" formControlName="weight" placeholder="Enter weight in kg" />
+
+    <button type="submit" [disabled]="bmiForm.invalid">Calculate</button>
+  </form>
+
+  <div *ngIf="bmiValue !== null" class="result">
+    <p>Your BMI: <strong>{{ bmiValue }}</strong></p>
+    <p>Status: <strong>{{ result }}</strong></p>
+  </div>
+</div>

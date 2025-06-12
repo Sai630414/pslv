@@ -1,0 +1,18 @@
+<div class="page-wrapper">
+  <div class="status-container" [class.flipped]="inView" #statusSection>
+    <h2>Know Your Status</h2>
+    <p>
+      Understanding your health metrics like BMI and Waist-Hip Ratio can help you take charge of your fitness and guide your journey to a healthier lifestyle.
+    </p>
+
+    <div class="button-container">
+      <button (click)="toggleForm('bmi')" class="slide-left">BMI Calculator</button>
+      <button (click)="toggleForm('whr')" class="slide-right">Waist-Hip Ratio</button>
+    </div>
+
+    <div class="form-area">
+      <app-bmi-form *ngIf="showBmiForm"></app-bmi-form>
+      <app-whr-form *ngIf="showWhrForm"></app-whr-form>
+    </div>
+  </div>
+</div>

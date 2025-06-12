@@ -1,0 +1,24 @@
+<div class="whr-form-container">
+  <h2>Waist-Hip Ratio Calculator</h2>
+  <form [formGroup]="whrForm" (ngSubmit)="calculateWHR()">
+    <label for="waist">Waist (cm)</label>
+    <input id="waist" type="number" formControlName="waist" placeholder="Enter waist size" />
+
+    <label for="hip">Hip (cm)</label>
+    <input id="hip" type="number" formControlName="hip" placeholder="Enter hip size" />
+
+    <label for="gender">Gender</label>
+    <select id="gender" formControlName="gender">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <button type="submit" [disabled]="whrForm.invalid">Calculate</button>
+  </form>
+
+  <div *ngIf="whrValue !== null" class="result">
+    <p>Your WHR: <strong>{{ whrValue }}</strong></p>
+    <p>Health Risk Status: <strong>{{ status }}</strong></p>
+  </div>
+</div>
